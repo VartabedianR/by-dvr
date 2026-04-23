@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "Développeur Shopify Partner",
+    "tagline": "Disponible CDI & Freelance",
+    "scrollHint": "SCROLL",
+    "cta": {
+      "viewProjects": "Voir mes projets",
+      "contact": "Me contacter"
+    }
+  },
+  "common": {
+    "openToWork": "Open to Work"
+  }
+}

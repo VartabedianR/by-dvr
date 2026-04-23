@@ -2,11 +2,14 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/Badge";
 import { profile } from "@/data/profile";
 
 export function Hero() {
   const reduce = useReducedMotion();
+  const t = useTranslations("hero");
+  const tCommon = useTranslations("common");
 
   const fade = (delay: number) => ({
     initial: reduce ? false : { opacity: 0, y: 16 },
@@ -33,7 +36,7 @@ export function Hero() {
           <div className="col-span-12 lg:col-span-10 xl:col-span-9">
             {profile.status.available ? (
               <motion.div {...fade(0)} className="mb-8">
-                <Badge pulse>{profile.status.label}</Badge>
+                <Badge pulse>{tCommon("openToWork")}</Badge>
               </motion.div>
             ) : null}
 
@@ -48,7 +51,7 @@ export function Hero() {
               {...fade(0.2)}
               className="mt-6 text-xl sm:text-2xl lg:text-3xl text-foreground/90 font-medium"
             >
-              {profile.title}
+              {t("title")}
               <span className="text-muted"> &middot; </span>
               <span className="text-muted">{profile.stack}</span>
             </motion.p>
@@ -57,7 +60,7 @@ export function Hero() {
               {...fade(0.3)}
               className="mt-4 text-base sm:text-lg text-muted max-w-2xl"
             >
-              {profile.tagline} &middot; {profile.location}
+              {t("tagline")} &middot; {profile.location}
             </motion.p>
 
             <motion.div
@@ -68,7 +71,7 @@ export function Hero() {
                 href="#projects"
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-[#0a0a0a] font-medium hover:bg-accent-hover transition-colors"
               >
-                Voir mes projets
+                {t("cta.viewProjects")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
 
@@ -77,7 +80,7 @@ export function Hero() {
                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-border bg-surface/40 hover:bg-surface hover:border-foreground/30 transition-colors text-foreground"
               >
                 <Mail className="h-4 w-4" />
-                Me contacter
+                {t("cta.contact")}
               </a>
             </motion.div>
           </div>
@@ -87,7 +90,7 @@ export function Hero() {
           {...fade(0.6)}
           className="absolute bottom-8 left-6 sm:left-10 lg:left-16 text-xs text-muted font-mono tracking-wider"
         >
-          <span aria-hidden>&darr;</span> SCROLL
+          <span aria-hidden>&darr;</span> {t("scrollHint")}
         </motion.div>
       </div>
     </section>

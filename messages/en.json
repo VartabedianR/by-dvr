@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "Shopify Partner Developer",
+    "tagline": "Available for permanent & freelance roles",
+    "scrollHint": "SCROLL",
+    "cta": {
+      "viewProjects": "View my projects",
+      "contact": "Contact me"
+    }
+  },
+  "common": {
+    "openToWork": "Open to Work"
+  }
+}

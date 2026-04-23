@@ -1,8 +1,6 @@
 export const profile = {
   name: "Romain Vartabedian",
-  title: "Développeur Shopify Partner",
   stack: "React · Next.js · Node.js",
-  tagline: "Disponible CDI & Freelance",
   location: "Marseille & Remote",
   email: "romain.vartabedian@gmail.com",
   social: {
@@ -11,7 +9,6 @@ export const profile = {
   },
   status: {
     available: true,
-    label: "Open to Work",
   },
 } as const;
 

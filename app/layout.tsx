@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { getLocale } from "next-intl/server";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,20 +25,21 @@ export const metadata: Metadata = {
     description:
       "Shopify Partner · React / Next.js / Node.js · Marseille & Remote",
     type: "website",
-    locale: "fr_FR",
   },
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale();
+
   return (
     <html
-  lang="fr"
-  suppressHydrationWarning
-  className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
->
+      lang={locale}
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
       </body>
