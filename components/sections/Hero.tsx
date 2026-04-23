@@ -69,7 +69,7 @@ export function Hero() {
             >
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-[#0a0a0a] font-medium hover:bg-accent-hover transition-colors"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-background font-medium hover:bg-accent-hover transition-colors"
               >
                 {t("cta.viewProjects")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
