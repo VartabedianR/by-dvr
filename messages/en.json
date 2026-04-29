@@ -17,11 +17,58 @@
   "about": {
     "label": "About",
     "title": "Building useful tools",
-    "paragraph1": "Marseille-based developer with an unconventional path — social worker, then artisan, then business owner, now developer. What I kept from each step is the same instinct: building tools that genuinely save time for the people who use them.",
-    "paragraph2": "I design and build web applications focused on the Shopify ecosystem — public apps, custom Liquid themes, Checkout Extensibility migrations. Certified Shopify Partner.",
+    "paragraph1": "Marseille-based developer with an unconventional path - social worker, then artisan, then business owner, now developer. What I kept from each step is the same instinct: building tools that genuinely save time for the people who use them.",
+    "paragraph2": "I design and build web applications focused on the Shopify ecosystem : public apps, custom Liquid themes, Checkout Extensibility migrations. Certified Shopify Partner.",
     "paragraph3": "Alongside this, I'm developing a mobile inventory management SaaS with barcode scanning, originally designed for cosmetic labs. Vertical-specific presets are in the works for construction trades and food artisans (bakers, butchers, restaurateurs).",
+    "paragraph4": "On the creative side, I work with Illustrator, Figma, and Photoshop. This allows me to deliver mockups, visual identities, and vector assets without relying on an external designer.",
     "currentlyLabel": "In progress",
     "currentlyContent": "2 Shopify apps being finalized for the App Store, Android beta of the SaaS being stabilized, Liquid themes delivered to direct clients."
+  },
+  "projects": {
+    "label": "Projects",
+    "title": "Selected work",
+    "statusInProgress": "In progress",
+    "viewLive": "View live site",
+    "ritualize": {
+      "title": "Ritualize AI",
+      "description": "Shopify app turning product discovery into personalized recommendations via an intelligent diagnostic engine. Three-tier SaaS monetization with strict feature gating, real-time analytics, and Klaviyo lead sync.",
+      "bullets": [
+        "Diagnostic engine with complex conditional logic",
+        "Real-time analytics dashboard (merchant ROI)",
+        "Strict freemium model (Free / Pro / Ultimate)",
+        "Automated lead sync to Klaviyo"
+      ]
+    },
+    "stockr": {
+      "title": "Stockr",
+      "description": "Inventory management SaaS designed for non-digitized small businesses. Offline-first mobile experience for field operations, desktop interface for management, business presets for friction-free onboarding.",
+      "bullets": [
+        "Smart Seeding by industry vertical (construction, food artisans, cosmetics)",
+        "Predictive stockout alert engine",
+        "Real-time mobile/desktop sync with WatermelonDB",
+        "Hybrid Stripe subscription model"
+      ]
+    },
+    "reality-essential": {
+      "title": "Reality Essential",
+      "description": "Custom Shopify theme built for Laboratoire Maraterra, a French B2B cosmetic manufacturer. Conversion-focused interface for a professional audience, with qualifying multi-persona form and dedicated service sections.",
+      "bullets": [
+        "Multi-persona form with conditional logic",
+        "Custom sections for services and expertise pillars",
+        "Premium Clean Beauty design with animated client gallery",
+        "ISO 22716 compliance and EU regulatory standards integrated"
+      ]
+    },
+    "portfolio": {
+      "title": "by-dvr",
+      "description": "Bilingual personal portfolio built with Next.js 16, featuring dynamic locale routing, Framer Motion animations, and a custom design system. Designed as both a technical demonstration and a showcase.",
+      "bullets": [
+        "App Router architecture with dynamic [locale] segment and Server Components",
+        "Full server-side i18n system with next-intl",
+        "Dark-first design system with Tailwind 4 tokens",
+        "Scroll and entry animations respecting prefers-reduced-motion"
+      ]
+    }
   },
   "common": {
     "openToWork": "Open to Work"

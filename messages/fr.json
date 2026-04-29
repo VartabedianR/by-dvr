@@ -17,11 +17,58 @@
   "about": {
     "label": "À propos",
     "title": "Construire des outils utiles",
-    "paragraph1": "Développeur basé à Marseille, au parcours atypique — travailleur social, puis artisan, puis patron, aujourd'hui développeur. De chacune de ces étapes j'ai gardé le même réflexe : construire des outils qui font vraiment gagner du temps aux gens qui s'en servent.",
-    "paragraph2": "Je conçois et développe des applications web spécialisées dans l'écosystème Shopify — apps publiques, thèmes Liquid custom, migrations Checkout Extensibility. Shopify Partner certifié.",
+    "paragraph1": "Développeur basé à Marseille, au parcours atypique - travailleur social, puis artisan, puis patron, aujourd'hui développeur. De chacune de ces étapes j'ai gardé le même réflexe : construire des outils qui font vraiment gagner du temps aux gens qui s'en servent.",
+    "paragraph2": "Je conçois et développe des applications web spécialisées dans l'écosystème Shopify : apps publiques, thèmes Liquid custom, migrations Checkout Extensibility. Shopify Partner certifié.",
     "paragraph3": "En parallèle, je développe un SaaS mobile de gestion de stock avec scan code-barres, initialement pensé pour les laboratoires cosmétiques. Des presets spécifiques sont en cours pour les métiers du BTP et les artisans de bouche (boulangers, bouchers, restaurateurs).",
+    "paragraph4": "Côté outils créatifs, je maîtrise Illustrator, Figma et Photoshop. Cela me permet de livrer maquettes, identités visuelles et assets vectorisés sans dépendre d'un designer externe.",
     "currentlyLabel": "En cours",
     "currentlyContent": "2 apps Shopify en finalisation pour l'App Store, bêta Android du SaaS en cours de stabilisation, thèmes Liquid livrés à des clients directs."
+  },
+  "projects": {
+    "label": "Projets",
+    "title": "Sélection de réalisations",
+    "statusInProgress": "En cours",
+    "viewLive": "Voir le site",
+    "ritualize": {
+      "title": "Ritualize AI",
+      "description": "App Shopify qui transforme la découverte produit en conseil personnalisé via un moteur de diagnostic intelligent. Monétisation SaaS trois paliers avec feature gating, analytics temps réel, sync leads Klaviyo.",
+      "bullets": [
+        "Moteur de diagnostic avec logique conditionnelle complexe",
+        "Dashboard analytics en temps réel (ROI marchand)",
+        "Modèle freemium rigoureux (Free / Pro / Ultimate)",
+        "Sync automatisée des leads vers Klaviyo"
+      ]
+    },
+    "stockr": {
+      "title": "Stockr",
+      "description": "SaaS de gestion de stock pensé pour les TPE/PME non-digitalisées. Expérience mobile offline-first pour l'opérationnel terrain, interface desktop pour le pilotage, presets métier pour un onboarding sans friction.",
+      "bullets": [
+        "Smart Seeding par verticalité métier (BTP, artisans de bouche, cosmétique)",
+        "Moteur d'alertes prédictives sur les ruptures",
+        "Sync temps réel mobile/desktop avec WatermelonDB",
+        "Modèle d'abonnement hybride Stripe"
+      ]
+    },
+    "reality-essential": {
+      "title": "Reality Essential",
+      "description": "Thème Shopify custom développé pour Laboratoire Maraterra, façonnier cosmétique B2B français. Interface orientée conversion pour un public professionnel, avec formulaire multi-persona qualifiant et sections dédiées aux services.",
+      "bullets": [
+        "Formulaire multi-persona à logique conditionnelle",
+        "Sections custom pour la mise en avant des services et piliers d'expertise",
+        "Design Clean Beauty premium avec galerie clients animée",
+        "Conformité ISO 22716 et standards réglementaires UE intégrés"
+      ]
+    },
+    "portfolio": {
+      "title": "by-dvr",
+      "description": "Portfolio personnel bilingue construit en Next.js 16 avec routing dynamique par locale, animations orchestrées via Framer Motion et système de design sur-mesure. Conçu comme une démonstration technique autant qu'une vitrine.",
+      "bullets": [
+        "Architecture App Router avec segment dynamique [locale] et Server Components",
+        "Système i18n complet côté serveur avec next-intl",
+        "Design system dark-first avec tokens Tailwind 4",
+        "Animations scroll et entrée respectant prefers-reduced-motion"
+      ]
+    }
   },
   "common": {
     "openToWork": "Open to Work"
