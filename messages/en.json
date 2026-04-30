@@ -71,6 +71,17 @@
       ]
     }
   },
+  "skills": {
+    "label": "Skills",
+    "title": "Tech stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "mobile": "Mobile",
+    "design": "Design & creative tools",
+    "designNote1": "Vector Packaging - Pantone Charts",
+    "designNote2": "UI Prototyping - Brand Identity",
+    "tools": "Tools & DevOps"
+  },
   "common": {
     "openToWork": "Open to Work"
   }

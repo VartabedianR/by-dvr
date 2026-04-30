@@ -13,3 +13,31 @@ export const profile = {
 } as const;
 
 export type Profile = typeof profile;
+
+export type SkillCategory = {
+  id: string;
+  items: readonly string[];
+};
+
+export const skills: readonly SkillCategory[] = [
+  {
+    id: "frontend",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Liquid", "Polaris", "Shopify (Partner certifié)"],
+  },
+  {
+    id: "backend",
+    items: ["Node.js", "GraphQL", "Prisma", "Supabase", "MongoDB"],
+  },
+  {
+    id: "mobile",
+    items: ["React Native", "Expo", "WatermelonDB"],
+  },
+  {
+    id: "design",
+    items: ["Illustrator", "Figma", "Photoshop"],
+  },
+  {
+    id: "tools",
+    items: ["Git", "Vercel", "n8n", "Docker", "Shopify CLI"],
+  },
+] as const;
