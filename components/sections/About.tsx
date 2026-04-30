@@ -24,7 +24,7 @@ export function About() {
               <SectionHeading label={t("label")} title={t("title")} />
             </motion.div>
 
-            <div className="space-y-6 text-base sm:text-lg text-foreground/80 leading-relaxed">
+            <div className="space-y-4 text-base sm:text-lg text-foreground/80 leading-relaxed">
               <motion.p {...fade(0.1)}>{t("paragraph1")}</motion.p>
               <motion.p {...fade(0.2)}>{t("paragraph2")}</motion.p>
               <motion.p {...fade(0.3)}>{t("paragraph3")}</motion.p>
