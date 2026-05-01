@@ -82,6 +82,14 @@
     "designNote2": "UI Prototyping - Brand Identity",
     "tools": "Tools & DevOps"
   },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's talk about your project",
+    "tagline": "Got a project in mind? A mission to entrust? Drop me a line.",
+    "copyEmail": "Copy",
+    "copied": "Copied!",
+    "followLabel": "Follow me"
+  },
   "common": {
     "openToWork": "Open to Work"
   }

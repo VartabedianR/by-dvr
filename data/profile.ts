@@ -4,8 +4,8 @@ export const profile = {
   location: "Marseille & Remote",
   email: "romain.vartabedian@gmail.com",
   social: {
-    github: "https://github.com/",
-    linkedin: "https://linkedin.com/in/romain-vartabedian",
+    github: "https://github.com/VartabedianR",
+    linkedin: "https://www.linkedin.com/in/romain-vartabedian",
   },
   status: {
     available: true,

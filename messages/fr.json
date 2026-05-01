@@ -82,6 +82,14 @@
     "designNote2": "Prototypage UI - Création d'identités",
     "tools": "Outils & DevOps"
   },
+  "contact": {
+    "label": "Contact",
+    "title": "Discutons de votre projet",
+    "tagline": "Un projet en tête ? Une mission à confier ? Écrivez-moi.",
+    "copyEmail": "Copier",
+    "copied": "Copié !",
+    "followLabel": "Me suivre"
+  },
   "common": {
     "openToWork": "Open to Work"
   }
