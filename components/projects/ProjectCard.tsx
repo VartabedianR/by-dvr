@@ -41,13 +41,13 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
       >
         {hasImages ? (
           <div className="space-y-4">
-            <div className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface">
+            <div className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface group/img transition-colors hover:border-accent/40">
               <Image
                 src={activeImage!.src}
                 alt={activeImage!.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 700px"
-                className="object-contain"
+                className="object-contain transition-transform duration-500 ease-out motion-safe:group-hover/img:scale-[1.02]"
                 priority={false}
               />
             </div>

@@ -54,7 +54,7 @@ export function Contact() {
         >
           <a
             href={`mailto:${profile.email}`}
-            className="text-2xl sm:text-3xl lg:text-4xl font-mono text-foreground hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors break-all sm:break-normal"
+            className="text-xl sm:text-3xl lg:text-4xl font-mono text-foreground hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors break-all sm:break-normal"
           >
             {profile.email}
           </a>
