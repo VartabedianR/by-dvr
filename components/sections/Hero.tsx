@@ -5,6 +5,7 @@ import { ArrowRight, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/Badge";
 import { profile } from "@/data/profile";
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -20,7 +21,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden scroll-mt-24"
     >
       <div
         aria-hidden
@@ -69,7 +70,11 @@ export function Hero() {
             >
               <a
                 href="#projects"
-                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-background font-medium hover:bg-accent-hover transition-colors"
+                className={cn(
+                "group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-background font-medium hover:bg-accent-hover",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                "transition-colors"
+                )}
               >
                 {t("cta.viewProjects")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -77,7 +82,11 @@ export function Hero() {
 
               <a
                 href={`mailto:${profile.email}`}
-                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-border bg-surface/40 hover:bg-surface hover:border-foreground/30 transition-colors text-foreground"
+                className={cn(
+                  "group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-border bg-surface/40 hover:bg-surface hover:border-foreground/30",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background text-foreground",
+                  "transition-colors"
+                )}
               >
                 <Mail className="h-4 w-4" />
                 {t("cta.contact")}

@@ -20,14 +20,14 @@ export function Projects() {
     return (
         <section
             id="projects"
-            className="relative py-24 sm:py-32 lg:py-40"
+            className="relative py-24 sm:py-32 lg:py-40 scroll-mt-24"
         >
             <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
                 <motion.div {...fade}>
                     <SectionHeading label={t("label")} title={t("title")} />
                 </motion.div>
 
-                <div className="space-y-24 sm:space-y-32 lg:space-y-40">
+                <div className="space-y-16 sm:space-y-20 lg:space-y-24">
                     {projects.map((project, idx) => (
                         <ProjectCard
                             key={project.id}

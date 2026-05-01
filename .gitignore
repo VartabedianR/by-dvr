@@ -44,6 +44,7 @@ next-env.d.ts
 CLAUDE.md
 AGENTS.md
 .claude/
+.claude/*
 .cursor/
 *.ai-context
 *copilot*
