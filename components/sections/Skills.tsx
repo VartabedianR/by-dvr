@@ -18,7 +18,7 @@ export function Skills() {
   });
 
   return (
-    <section id="skills" className="relative py-24 sm:py-32 lg:py-40 scroll-mt-24">
+    <section id="skills" className="relative py-20 sm:py-28 lg:py-32 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <motion.div {...fade(0)}>
           <SectionHeading label={t("label")} title={t("title")} />

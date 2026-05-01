@@ -30,7 +30,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32 lg:py-40 scroll-mt-24">
+    <section id="contact" className="relative pt-20 pb-24 sm:pb-32 lg:pt-32 lg:pb-40 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <motion.div {...fade(0)} className="text-center">
           <SectionHeading
