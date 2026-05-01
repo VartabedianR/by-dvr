@@ -1,3 +1,4 @@
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { Nav } from "@/components/layout/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
@@ -9,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
       <Nav />
       <main className="flex-1">
         <Hero />
