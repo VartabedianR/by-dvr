@@ -90,6 +90,12 @@
     "copied": "Copié !",
     "followLabel": "Me suivre"
   },
+  "footer": {
+    "copyright": "© {year} Romain Vartabedian",
+    "tagline": "Développeur Shopify · Marseille",
+    "githubLabel": "Profil GitHub",
+    "linkedinLabel": "Profil LinkedIn"
+  },
   "common": {
     "openToWork": "Open to Work"
   }
