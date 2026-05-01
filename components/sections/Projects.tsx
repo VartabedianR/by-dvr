@@ -20,7 +20,7 @@ export function Projects() {
     return (
         <section
             id="projects"
-            className="relative py-24 sm:py-32 lg:py-40"
+            className="relative py-24 sm:py-32 lg:py-40 scroll-mt-24"
         >
             <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
                 <motion.div {...fade}>

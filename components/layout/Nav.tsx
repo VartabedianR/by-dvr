@@ -29,13 +29,17 @@ export function Nav() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
     >
       <nav className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 h-16 flex items-center justify-between">
-                 <a
+        <a
           href="#hero"
-          className="font-mono text-sm tracking-tight hover:text-accent transition-colors"
+          className={cn(
+            "font-mono text-sm tracking-tight hover:text-accent rounded-sm",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+            "transition-colors",
+          )}
         >
           by-dvr
         </a>
@@ -45,7 +49,11 @@ export function Nav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-muted hover:text-foreground transition-colors"
+                className={cn(
+                  "text-sm text-muted hover:text-foreground rounded-sm",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                  "transition-colors",
+                )}
               >
                 {link.label}
               </a>

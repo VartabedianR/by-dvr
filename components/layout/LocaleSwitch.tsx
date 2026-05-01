@@ -34,8 +34,9 @@ export function LocaleSwitch() {
             type="button"
             onClick={() => switchLocale(loc)}
             className={cn(
-              "uppercase tracking-wider px-1 transition-colors",
-              loc === locale
+              "uppercase tracking-wider px-1 rounded-sm transition-colors",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+            loc === locale
                 ? "text-foreground"
                 : "text-muted hover:text-foreground"
             )}

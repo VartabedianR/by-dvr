@@ -63,7 +63,8 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
                     aria-label={img.alt}
                     aria-current={idx === activeIndex}
                     className={cn(
-                      "relative flex-1 aspect-video rounded-lg overflow-hidden border-2 bg-surface transition-all",
+                      "relative flex-1 aspect-video rounded-lg overflow-hidden border-2 bg-surface",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all",
                       idx === activeIndex
                         ? "border-accent opacity-100"
                         : "border-border opacity-60 hover:opacity-90",
@@ -139,7 +140,10 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
             href={project.links.live.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
+            className={cn(
+              "inline-flex items-center gap-2 text-sm font-medium text-accent rounded-sm hover:text-accent-hover",
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-colors",
+            )}
           >
             {t("viewLive")} - {project.links.live.label}
             <ExternalLink className="h-3.5 w-3.5" />

@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { cn } from "@/lib/utils";
 
 export function About() {
   const reduce = useReducedMotion();
@@ -16,7 +17,7 @@ export function About() {
   });
 
   return (
-    <section id="about" className="relative py-24 sm:py-32 lg:py-40">
+    <section id="about" className="relative py-24 sm:py-32 lg:py-40 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-10 xl:col-span-9">
@@ -24,7 +25,7 @@ export function About() {
               <SectionHeading label={t("label")} title={t("title")} />
             </motion.div>
 
-            <div className="space-y-4 text-base sm:text-lg text-foreground/80 leading-relaxed">
+            <div tabIndex={0} className="space-y-4 text-base sm:text-lg text-foreground/80 leading-relaxed">
               <motion.p {...fade(0.1)}>{t("paragraph1")}</motion.p>
               <motion.p {...fade(0.2)}>{t("paragraph2")}</motion.p>
               <motion.p {...fade(0.3)}>{t("paragraph3")}</motion.p>
@@ -33,7 +34,11 @@ export function About() {
 
             <motion.p
               {...fade(0.5)}
-              className="mt-12 text-base sm:text-lg text-foreground/80 leading-relaxed border-l-2 border-accent pl-6"
+              className={cn(
+                "mt-12 text-base sm:text-lg text-foreground/80 leading-relaxed border-l-2 border-accent pl-6 rounded-sm",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                "transition-colors",
+              )}
             >
               <span className="font-semibold text-accent">
                 {t("currentlyLabel")}
