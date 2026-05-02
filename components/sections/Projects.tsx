@@ -20,8 +20,16 @@ export function Projects() {
     return (
         <section
             id="projects"
-            className="relative py-20 sm:py-28 lg:py-32 scroll-mt-24"
+            className="relative py-20 sm:py-28 lg:py-32 scroll-mt-24 overflow-hidden"
         >
+            <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none opacity-[0.12]"
+                style={{
+                    background:
+                        "radial-gradient(600px circle at 80% 20%, var(--color-accent), transparent 60%)",
+                }}
+            />
             <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
                 <motion.div {...fade}>
                     <SectionHeading label={t("label")} title={t("title")} />

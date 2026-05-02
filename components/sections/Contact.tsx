@@ -30,7 +30,15 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative pt-20 pb-24 sm:pb-32 lg:pt-32 lg:pb-40 scroll-mt-24">
+    <section id="contact" className="relative pt-20 pb-24 sm:pb-32 lg:pt-32 lg:pb-40 scroll-mt-24 overflow-hidden">
+      <div
+                aria-hidden
+                className="absolute inset-0 pointer-events-none opacity-[0.1]"
+                style={{
+                    background:
+                        "radial-gradient(600px circle at 50% 80%, var(--color-accent), transparent 60%)",
+                }}
+            />
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <motion.div {...fade(0)} className="text-center">
           <SectionHeading
