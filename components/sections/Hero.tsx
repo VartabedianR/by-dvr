@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/Badge";
+import { ScrollHint } from "@/components/ui/ScrollHint";
 import { profile } from "@/data/profile";
 import { cn } from "@/lib/utils";
 
@@ -95,12 +96,7 @@ export function Hero() {
           </div>
         </div>
 
-        <motion.div
-          {...fade(0.6)}
-          className="absolute bottom-8 left-6 sm:left-10 lg:left-16 text-xs text-muted font-mono tracking-wider"
-        >
-          <span aria-hidden>&darr;</span> {t("scrollHint")}
-        </motion.div>
+        <ScrollHint />
       </div>
     </section>
   );
