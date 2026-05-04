@@ -16,17 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Romain Vartabedian — Développeur Shopify & Full-Stack",
-  description:
-    "Développeur Shopify Partner basé à Marseille. Apps Shopify, thèmes Liquid, React / Next.js / Node.js. Disponible CDI & Freelance.",
   metadataBase: new URL("https://by-dvr.vercel.app"),
-  openGraph: {
-    title: "Romain Vartabedian — Développeur Shopify & Full-Stack",
-    description:
-      "Shopify Partner · React / Next.js / Node.js · Marseille & Remote",
-    type: "website",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-icon.png"
   },
-  robots: { index: true, follow: true },
 };
 
 export default async function RootLayout({
