@@ -10,13 +10,6 @@ export function Projects() {
     const reduce = useReducedMotion();
     const t = useTranslations("projects");
 
-    const fade = {
-        initial: reduce ? false : { opacity: 0, y: 16 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, margin: "-100px" },
-        transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
-    };
-
     return (
         <section
             id="projects"
@@ -31,7 +24,12 @@ export function Projects() {
                 }}
             />
             <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
-                <motion.div {...fade}>
+                <motion.div
+                    initial={reduce ? false : { clipPath: "inset(0 0 100% 0)" }}
+                    whileInView={{ clipPath: "inset(0 0 0% 0)" }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                >
                     <SectionHeading label={t("label")} title={t("title")} />
                 </motion.div>
 
