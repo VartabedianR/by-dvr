@@ -3,10 +3,14 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
+
 import { Badge } from "@/components/ui/Badge";
 import { ScrollHint } from "@/components/ui/ScrollHint";
+import { HeroOrbs } from "@/components/ui/HeroOrbs";
+import { SplitText } from "@/components/ui/SplitText";
+import { GlowButton } from "@/components/ui/GlowButton";
+
 import { profile } from "@/data/profile";
-import { cn } from "@/lib/utils";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -33,6 +37,8 @@ export function Hero() {
         }}
       />
 
+      <HeroOrbs />
+
       <div className="w-full max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-10 xl:col-span-9">
@@ -42,12 +48,9 @@ export function Hero() {
               </motion.div>
             ) : null}
 
-            <motion.h1
-              {...fade(0.1)}
-              className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.05]"
-            >
-              {profile.name}
-            </motion.h1>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.05]">
+              <SplitText text={profile.name} delay={0.1} />
+            </h1>
 
             <motion.p
               {...fade(0.2)}
@@ -65,33 +68,26 @@ export function Hero() {
               {t("tagline")} &middot; {profile.location}
             </motion.p>
 
+            <motion.p
+              {...fade(0.35)}
+              className="mt-8 text-sm sm:text-base font-mono tracking-wider text-accent"
+            >
+              {t("statement")}
+            </motion.p>
+
             <motion.div
               {...fade(0.4)}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-              <a
-                href="#projects"
-                className={cn(
-                "group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-accent text-background font-medium hover:bg-accent-hover",
-                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                "transition-colors"
-                )}
-              >
+              <GlowButton href="#projects" variant="primary">
                 {t("cta.viewProjects")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
+              </GlowButton>
 
-              <a
-                href={`mailto:${profile.email}`}
-                className={cn(
-                  "group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-border bg-surface/40 hover:bg-surface hover:border-foreground/30",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background text-foreground",
-                  "transition-colors"
-                )}
-              >
+              <GlowButton href={`mailto:${profile.email}`} variant="secondary">
                 <Mail className="h-4 w-4" />
                 {t("cta.contact")}
-              </a>
+              </GlowButton>
             </motion.div>
           </div>
         </div>
