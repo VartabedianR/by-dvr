@@ -128,7 +128,7 @@ export const projects: Project[] = [
     {
         id: "portfolio",
         category: "Personal Website",
-        status: "in-progress",
+        status: "published",
         tags: ["react", "design"],
         stack: [
             "Next.js 16",
@@ -138,8 +138,26 @@ export const projects: Project[] = [
             "next-intl",
             "Framer Motion",
         ],
-        images: [],
-        links: {},
-        featured: false,
+        images: [
+            {
+                src: "/projects/portfolio-hero-desktop.webp",
+                alt: "Hero du portfolio avec animation de texte et call-to-action",
+            },
+            {
+                src: "/projects/portfolio-projects-grid.webp",
+                alt: "Grille des projets avec cards interactions",
+            },
+            {
+                src: "/projects/portfolio-hero-mobile.webp",
+                alt: "Vue mobile responsive du portfolio sur iPhone",
+            },
+        ],
+        links: {
+            live: {
+                url: "https://by-dvr.vercel.app",
+                label: "by-dvr.vercel.app",
+            },
+        },
+        featured: true,
     },
 ];

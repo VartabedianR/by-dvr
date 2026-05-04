@@ -30,10 +30,10 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="absolute inset-0 pointer-events-none opacity-[0.15]"
+        className="absolute inset-0 pointer-events-none opacity-[0.05]"
         style={{
           background:
-            "radial-gradient(600px circle at 20% 30%, var(--color-accent), transparent 60%)",
+            "radial-gradient(550px circle at 20% 30%, var(--color-accent), transparent 60%)",
         }}
       />
 

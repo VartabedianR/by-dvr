@@ -39,6 +39,9 @@ export function Contact() {
                         "radial-gradient(600px circle at 50% 80%, var(--color-accent), transparent 60%)",
                 }}
             />
+
+            
+
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <motion.div {...fade(0)} className="text-center">
           <SectionHeading

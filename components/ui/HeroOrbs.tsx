@@ -17,34 +17,34 @@ type Orb = {
 const orbs: Orb[] = [
     // Grand orbe : bas-droite, dérive lente
     {
-        size: 320,
+        size: 240,
         initialX: "70%",
         initialY: "60%",
         duration: 22,
         delay: 0,
-        opacity: 0.15,
+        opacity: 0.08,
         xRange: 60,
         yRange: 40,
     },
     // Orbe moyen : centre-haut, dérive opposée
     {
-       size: 220,
+       size: 160,
         initialX: "45%",
         initialY: "20%",
         duration: 28,
         delay: 2,
-        opacity: 0.10,
+        opacity: 0.06,
         xRange: -50,
         yRange: 50, 
     },
     // Petit orbe : bas-gauche, dérive courte
     {
-       size: 160,
+       size: 120,
         initialX: "15%",
         initialY: "75%",
         duration: 18,
         delay: 4,
-        opacity: 0.08,
+        opacity: 0.04,
         xRange: 40,
         yRange: -30, 
     },
@@ -69,7 +69,7 @@ export function HeroOrbs() {
             {orbs.map((orb, idx) => (
                 <motion.div
                     key={idx}
-                    className="absolute rounded-full blur-3xl"
+                    className="absolute rounded-full blur-2xl"
                     style={{
                         width: orb.size,
                         height: orb.size,
