@@ -33,7 +33,7 @@ export function Projects() {
                     <SectionHeading label={t("label")} title={t("title")} />
                 </motion.div>
 
-                <div className="space-y-16 sm:space-y-20 lg:space-y-24">
+                <div className="space-y-16 sm:space-y-20 lg:space-y-24 relative">
                     {projects.map((project, idx) => (
                         <ProjectCard
                             key={project.id}
