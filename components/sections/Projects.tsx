@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { HeroOrbs } from "@/components/ui/HeroOrbs";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { projects } from "@/data/projects";
 
@@ -23,6 +24,9 @@ export function Projects() {
                         "radial-gradient(600px circle at 80% 20%, var(--color-accent), transparent 60%)",
                 }}
             />
+
+            <HeroOrbs />
+            
             <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
                 <motion.div
                     initial={reduce ? false : { clipPath: "inset(0 0 100% 0)" }}
