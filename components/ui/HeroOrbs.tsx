@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 type Orb = {
     size: number;
@@ -51,6 +52,14 @@ const orbs: Orb[] = [
 
 export function HeroOrbs() {
     const reduce = useReducedMotion();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        const id = requestAnimationFrame(() => setMounted(true));
+        return () => cancelAnimationFrame(id);
+    }, []);
+
+    if (!mounted) return null;
 
     return (
         <div
