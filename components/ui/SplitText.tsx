@@ -28,7 +28,7 @@ export function SplitText({
         splitBy === "word" ? text.split(" ") : text.split("");
 
     return (
-        <span className={className} aria-label={text}>
+        <span className={className} role="text" aria-label={text}>
             {segments.map((segment, idx) => (
                 <motion.span
                     key={idx}

@@ -35,13 +35,6 @@ export function About() {
               <motion.p {...fade(0.4)}>{t("paragraph4")}</motion.p>
             </div>
 
-            {/*<motion.p
-              {...fade(0.45)}
-              className="mt-12 text-lg sm:text-xl lg:text-2xl font-medium text-foreground italic max-w-3xl"
-            >
-              &laquo;&nbsp;{t("manifesto")}&nbsp;&raquo;
-            </motion.p>*/}
-
             <p className="mt-12 text-lg sm:text-xl lg:text-2xl font-medium text-foreground italic max-w-3xl">
               &laquo;&nbsp;
               <SplitText
