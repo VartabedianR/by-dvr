@@ -17,7 +17,7 @@ export function About() {
   });
 
   return (
-    <section id="about" className="relative py-24 sm:py-32 lg:py-40 scroll-mt-24">
+    <section id="about" className="relative py-20 sm:py-28 lg:py-32 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-10 xl:col-span-9">

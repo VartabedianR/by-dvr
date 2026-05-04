@@ -2,7 +2,8 @@
 
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import { useTransition } from "react";
+import { useEffect, useTransition } from "react";
+import { Loader2 } from "lucide-react";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
@@ -20,13 +21,22 @@ export function LocaleSwitch() {
     startTransition(() => router.replace(nextPath));
   };
 
+  useEffect(() => {
+    if (isPending) {
+      document.documentElement.classList.add("cursor-wait");
+    } else {
+      document.documentElement.classList.remove("cursor-wait");
+    }
+    return () => {
+      document.documentElement.classList.remove("cursor-wait");
+    };
+  }, [isPending]);
+
   return (
     <div
-      className={cn(
-        "inline-flex items-center gap-1 text-xs font-mono",
-        isPending && "opacity-50"
-      )}
+      className="inline-flex items-center gap-1.5 text-xs font-mono"
       aria-label="Language switcher"
+      aria-busy={isPending}
     >
       {routing.locales.map((loc, idx) => (
         <div key={loc} className="flex items-center">
@@ -35,8 +45,9 @@ export function LocaleSwitch() {
             onClick={() => switchLocale(loc)}
             className={cn(
               "uppercase tracking-wider px-1 rounded-sm transition-colors",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-            loc === locale
+              "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+              "disabled:cursor-wait",
+              loc === locale
                 ? "text-foreground"
                 : "text-muted hover:text-foreground"
             )}
@@ -49,6 +60,13 @@ export function LocaleSwitch() {
           )}
         </div>
       ))}
+
+      {isPending && (
+        <Loader2
+          className="h-3 w-3 ml-1 animate-spin text-accent"
+          aria-hidden="true"
+        />
+      )}
     </div>
   );
 }
