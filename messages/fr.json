@@ -9,6 +9,7 @@
     "title": "Développeur Shopify Partner",
     "tagline": "Disponible CDI & Freelance",
     "scrollHint": "SCROLL",
+    "statement": "Code. Design. Convictions.",
     "cta": {
       "viewProjects": "Voir mes projets",
       "contact": "Me contacter"
@@ -17,6 +18,7 @@
   "about": {
     "label": "À propos",
     "title": "Construire des outils utiles",
+    "manifesto": "Venu du terrain, arrivé au code. Les vrais problèmes d'abord, la technique ensuite.",
     "paragraph1": "Développeur basé à Marseille, au parcours atypique - travailleur social, puis artisan, puis patron, aujourd'hui développeur. De chacune de ces étapes j'ai gardé le même réflexe : construire des outils qui font vraiment gagner du temps aux gens qui s'en servent.",
     "paragraph2": "Je conçois et développe des applications web spécialisées dans l'écosystème Shopify : apps publiques, thèmes Liquid custom, migrations Checkout Extensibility. Shopify Partner certifié.",
     "paragraph3": "En parallèle, je développe un SaaS mobile de gestion de stock avec scan code-barres, initialement pensé pour les laboratoires cosmétiques. Des presets spécifiques sont en cours pour les métiers du BTP et les artisans de bouche (boulangers, bouchers, restaurateurs).",

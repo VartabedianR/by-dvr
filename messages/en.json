@@ -9,6 +9,7 @@
     "title": "Shopify Partner Developer",
     "tagline": "Available for permanent & freelance roles",
     "scrollHint": "SCROLL",
+    "statement": "Code. Design. Conviction.",
     "cta": {
       "viewProjects": "View my projects",
       "contact": "Contact me"
@@ -17,6 +18,7 @@
   "about": {
     "label": "About",
     "title": "Building useful tools",
+    "manifesto": "From the field to the code. Real problems first, technique second.",
     "paragraph1": "Marseille-based developer with an unconventional path - social worker, then artisan, then business owner, now developer. What I kept from each step is the same instinct: building tools that genuinely save time for the people who use them.",
     "paragraph2": "I design and build web applications focused on the Shopify ecosystem : public apps, custom Liquid themes, Checkout Extensibility migrations. Certified Shopify Partner.",
     "paragraph3": "Alongside this, I'm developing a mobile inventory management SaaS with barcode scanning, originally designed for cosmetic labs. Vertical-specific presets are in the works for construction trades and food artisans (bakers, butchers, restaurateurs).",

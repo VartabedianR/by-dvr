@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -25,6 +25,17 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
   const activeImage = hasImages ? project.images[activeIndex] : null;
   const bullets = tProject.raw("bullets") as string[];
 
+  const cardRef = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"],
+  });
+
+  const imageY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [40, -40]);
+
+  const textY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [-20, 20]);
+
   const fade = (delay: number) => ({
     initial: reduce ? false : { opacity: 0, y: 24 },
     whileInView: { opacity: 1, y: 0 },
@@ -33,10 +44,11 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
   });
 
   return (
-    <article className="grid grid-cols-12 gap-6 lg:gap-12 items-start">
+    <article ref={cardRef} className="relative grid grid-cols-12 gap-6 lg:gap-12 items-start">
       {/* Bloc images */}
       <motion.div
         {...fade(0)}
+        style={{ y: imageY }}
         className={cn("col-span-12 lg:col-span-7", reversed && "lg:order-2")}
       >
         {hasImages ? (
@@ -94,6 +106,7 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
       {/* Bloc contenu */}
       <motion.div
         {...fade(0.15)}
+        style={{ y: textY }}
         className={cn("col-span-12 lg:col-span-5", reversed && "lg:order-1")}
       >
         <div className="flex items-center gap-3 mb-3">

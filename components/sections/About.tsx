@@ -3,7 +3,10 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SplitText } from "@/components/ui/SplitText";
+
 import { cn } from "@/lib/utils";
+
 
 export function About() {
   const reduce = useReducedMotion();
@@ -31,6 +34,23 @@ export function About() {
               <motion.p {...fade(0.3)}>{t("paragraph3")}</motion.p>
               <motion.p {...fade(0.4)}>{t("paragraph4")}</motion.p>
             </div>
+
+            {/*<motion.p
+              {...fade(0.45)}
+              className="mt-12 text-lg sm:text-xl lg:text-2xl font-medium text-foreground italic max-w-3xl"
+            >
+              &laquo;&nbsp;{t("manifesto")}&nbsp;&raquo;
+            </motion.p>*/}
+
+            <p className="mt-12 text-lg sm:text-xl lg:text-2xl font-medium text-foreground italic max-w-3xl">
+              &laquo;&nbsp;
+              <SplitText
+                text={t("manifesto")}
+                splitBy="word"
+                staggerDuration={0.04}
+              />
+              &nbsp;&raquo;
+            </p>
 
             <motion.p
               {...fade(0.5)}
