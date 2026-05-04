@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <ScrollProgress />
       <Nav />
-      <main className="flex-1">
+      <main className="main flex-1">
         <Hero />
         <About />
         <Projects />

@@ -7,8 +7,11 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { TechBadge } from "@/components/ui/TechBadge";
-import { cn } from "@/lib/utils";
 import type { Project } from "@/data/projects";
+
+import { useTilt } from "@/hooks/useTilt";
+import { cn } from "@/lib/utils";
+
 
 type ProjectCardProps = {
   project: Project;
@@ -29,12 +32,10 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
 
   const { scrollYProgress } = useScroll({
     target: cardRef,
-    offset: ["start end", "end start"],
+    offset: ["start 85%", "end 15%"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [40, -40]);
-
-  const textY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [-20, 20]);
+  const imageY = useTransform(scrollYProgress, [0, 1], reduce ? [0, 0] : [15, -15]);
 
   const fade = (delay: number) => ({
     initial: reduce ? false : { opacity: 0, y: 24 },
@@ -43,8 +44,10 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
     transition: { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] as const },
   });
 
+  const tilt = useTilt();
+
   return (
-    <article ref={cardRef} className="relative grid grid-cols-12 gap-6 lg:gap-12 items-start">
+    <article ref={cardRef} className="relative grid grid-cols-12 gap-6 lg:gap-12 items-start" style={{ position: "relative"}}>
       {/* Bloc images */}
       <motion.div
         {...fade(0)}
@@ -53,7 +56,29 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
       >
         {hasImages ? (
           <div className="space-y-4">
-            <div className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface group/img transition-colors hover:border-accent/40">
+            <div style={{ perspective: "1000px" }}>
+              <motion.div
+                onMouseMove={tilt.onMouseMove}
+                onMouseLeave={tilt.onMouseLeave}
+                style={{
+                  rotateX: tilt.rotateX,
+                  rotateY: tilt.rotateY,
+                  transformStyle: "preserve-3d",
+                }}
+                className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface transition-colors hover:border-accent/40 hover:shadow-[0_0_20px_var(--color-accent)/15]"
+              >
+                <Image
+                src={activeImage!.src}
+                alt={activeImage!.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 700px"
+                className="object-contain"
+                priority={false}
+              />
+              </motion.div>
+            </div>
+
+            {/*<div className="relative aspect-video rounded-xl overflow-hidden border border-border bg-surface group/img transition-colors hover:border-accent/40">
               <Image
                 src={activeImage!.src}
                 alt={activeImage!.alt}
@@ -62,7 +87,7 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
                 className="object-contain transition-transform duration-500 ease-out motion-safe:group-hover/img:scale-[1.02]"
                 priority={false}
               />
-            </div>
+            </div>*/}
 
             {project.images.length > 1 && (
               <div className="flex gap-3">
@@ -106,7 +131,6 @@ export function ProjectCard({ project, reversed = false }: ProjectCardProps) {
       {/* Bloc contenu */}
       <motion.div
         {...fade(0.15)}
-        style={{ y: textY }}
         className={cn("col-span-12 lg:col-span-5", reversed && "lg:order-1")}
       >
         <div className="flex items-center gap-3 mb-3">
